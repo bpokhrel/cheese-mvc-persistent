@@ -80,6 +80,7 @@ public class CheeseController {
 
         return "redirect:";
     }
+    @RequestMapping(value="category",method=RequestMethod.GET)
     public String category(Model model,@RequestParam int id){
         Category cat =categoryDao.findOne(id);
         List<Cheese> cheeses =cat.getCheeses();
